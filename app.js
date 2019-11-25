@@ -14,17 +14,14 @@ function search(input) {
             let resultsHTML = '';
 
             json.data.forEach((obj) => {
-                const url = obj.images.fixed_width.url;
-                const height = obj.images.fixed_width.height;
-                const width = obj.images.fixed_width.width;
-                const title = obj.title;
+                const { url, height, width } = obj.images.fixed_width;
 
                 resultsHTML += `
                 <img src="${url}" 
                 class="item"
                 width="${width}" 
                 height="${height} 
-                alt="${title}">
+                alt="${obj.title}">
                 </img>`;
             });
 
