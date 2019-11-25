@@ -20,11 +20,12 @@ function search(input) {
                 const title = obj.title;
 
                 resultsHTML += `
-            <img src="${url}" 
-            width="${width}" 
-            height="${height} 
-            alt="${title}">
-            </img>`;
+                <img src="${url}" 
+                class="item"
+                width="${width}" 
+                height="${height} 
+                alt="${title}">
+                </img>`;
             });
 
             resultsElement.innerHTML = resultsHTML;
